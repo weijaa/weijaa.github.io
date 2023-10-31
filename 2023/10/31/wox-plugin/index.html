@@ -19,27 +19,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Recording q + 任意建進入錄製 1qa  操作想要操作的指令  案 q 離開  @ + 任意指令 執行錄製內容 1@a">
+    <meta name="description" content="如何用 C# 撰寫 wox plugin step 1  新 .NET framework 專案 安裝 nuget 套件     step 2  將 class 繼承 IPlugin 並實作功能  實作時先想好 想解決甚麼問題 input and output     step 3   做好後 build 一下專案 到 bin -&gt; debug 複製出所有 .dll檔案 開新資料夾存著">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vim in rider">
-<meta property="og:url" content="http://example.com/2023/10/23/Vim-in-rider/index.html">
+<meta property="og:title" content="wox plugin">
+<meta property="og:url" content="http://example.com/2023/10/31/wox-plugin/index.html">
 <meta property="og:site_name" content="weija&#39;s Blog">
-<meta property="og:description" content="Recording q + 任意建進入錄製 1qa  操作想要操作的指令  案 q 離開  @ + 任意指令 執行錄製內容 1@a">
+<meta property="og:description" content="如何用 C# 撰寫 wox plugin step 1  新 .NET framework 專案 安裝 nuget 套件     step 2  將 class 繼承 IPlugin 並實作功能  實作時先想好 想解決甚麼問題 input and output     step 3   做好後 build 一下專案 到 bin -&gt; debug 複製出所有 .dll檔案 開新資料夾存著">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2023-10-23T15:35:11.000Z">
-<meta property="article:modified_time" content="2023-10-23T15:37:33.626Z">
+<meta property="og:image" content="https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_24534993274ad495efd7bcbdba03c603.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1698766380&Signature=z9G4bCRQyaWsQbjJpHCHcljc4bU=">
+<meta property="og:image" content="https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_89c19f648fe78a1050d56025b290e6b7.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1698766356&Signature=kVKT/rtGfpsRouHVvVD26sVl0hA=">
+<meta property="article:published_time" content="2023-10-31T15:05:47.000Z">
+<meta property="article:modified_time" content="2023-10-31T15:28:07.451Z">
 <meta property="article:author" content="Weijaaaaa">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_24534993274ad495efd7bcbdba03c603.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1698766380&Signature=z9G4bCRQyaWsQbjJpHCHcljc4bU=">
 
 
-<link rel="canonical" href="http://example.com/2023/10/23/Vim-in-rider/">
+<link rel="canonical" href="http://example.com/2023/10/31/wox-plugin/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/2023/10/23/Vim-in-rider/","path":"2023/10/23/Vim-in-rider/","title":"Vim in rider"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/2023/10/31/wox-plugin/","path":"2023/10/31/wox-plugin/","title":"wox plugin"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Vim in rider | weija's Blog</title>
+<title>wox plugin | weija's Blog</title>
   
 
 
@@ -104,7 +107,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Recording"><span class="nav-number">1.</span> <span class="nav-text">Recording</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%94%A8-C-%E6%92%B0%E5%AF%AB-wox-plugin"><span class="nav-number">1.</span> <span class="nav-text">如何用 C# 撰寫 wox plugin</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -145,7 +148,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/23/Vim-in-rider/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/31/wox-plugin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -158,12 +161,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Vim in rider | weija's Blog">
+      <meta itemprop="name" content="wox plugin | weija's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Vim in rider
+          wox plugin
         </h1>
 
         <div class="post-meta-container">
@@ -175,7 +178,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2023-10-23 23:35:11 / 修改時間：23:37:33" itemprop="dateCreated datePublished" datetime="2023-10-23T23:35:11+08:00">2023-10-23</time>
+      <time title="創建時間：2023-10-31 23:05:47 / 修改時間：23:28:07" itemprop="dateCreated datePublished" datetime="2023-10-31T23:05:47+08:00">2023-10-31</time>
     </span>
 
   
@@ -187,16 +190,41 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="Recording"><a href="#Recording" class="headerlink" title="Recording"></a>Recording</h3><ul>
-<li><p>q + 任意建進入錄製</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qa</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h1 id="如何用-C-撰寫-wox-plugin"><a href="#如何用-C-撰寫-wox-plugin" class="headerlink" title="如何用 C# 撰寫 wox plugin"></a>如何用 C# 撰寫 wox plugin</h1><ul>
+<li><p>step 1</p>
+<ul>
+<li>新 .NET framework 專案</li>
+<li>安裝 nuget 套件 </li>
+<li><img src="https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_24534993274ad495efd7bcbdba03c603.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1698766380&Signature=z9G4bCRQyaWsQbjJpHCHcljc4bU="></li>
+</ul>
 </li>
-<li><p>操作想要操作的指令</p>
+<li><p>step 2</p>
+<ul>
+<li>將 class 繼承 IPlugin 並實作功能</li>
+<li><img src="https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_89c19f648fe78a1050d56025b290e6b7.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1698766356&Signature=kVKT/rtGfpsRouHVvVD26sVl0hA="></li>
+<li>實作時先想好<ul>
+<li>想解決甚麼問題</li>
+<li>input and output</li>
+</ul>
 </li>
-<li><p>案 q 離開</p>
+</ul>
 </li>
-<li><p>@ + 任意指令 執行錄製內容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@a</span><br></pre></td></tr></table></figure></li>
+<li><p>step 3 </p>
+<ul>
+<li>做好後 build 一下專案</li>
+<li>到 bin -&gt; debug 複製出所有 .dll檔案</li>
+<li>開新資料夾存著</li>
+</ul>
+</li>
+<li><p>step 4</p>
+<ul>
+<li>創建新檔案 plugin.json<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;ID&quot;: &quot;_&#123;any-uniqlo-code&#125;_&quot;,</span><br><span class="line">  &quot;ActionKeyword&quot;: &quot;ip&quot;,</span><br><span class="line">  &quot;Name&quot;: &quot;Ip See See&quot;,</span><br><span class="line">  &quot;Description&quot;: &quot;A simple plugin to lookup ip&quot;,</span><br><span class="line">  &quot;Author&quot;: &quot;Weija&quot;,</span><br><span class="line">  &quot;Version&quot;: &quot;1.1.0&quot;,</span><br><span class="line">  &quot;Language&quot;: &quot;csharp&quot;,</span><br><span class="line">  &quot;Website&quot;: &quot;_&#123;your-any-website&#125;_&quot;,</span><br><span class="line">  &quot;IcoPath&quot;: &quot;app.png&quot;,</span><br><span class="line">  &quot;ExecuteFileName&quot;: &quot;&#123;plugin-file-name&#125;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>將 dll 檔和 json 檔壓縮成 zip檔</li>
+<li>把 zip附檔名改成 wox</li>
+<li>將 .wox 檔案拉近 wox </li>
+<li>完工!!!</li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -211,14 +239,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/10/16/to-do-list/" rel="prev" title="to_do_list">
-                  <i class="fa fa-angle-left"></i> to_do_list
+                <a href="/2023/10/23/Vim-in-rider/" rel="prev" title="Vim in rider">
+                  <i class="fa fa-angle-left"></i> Vim in rider
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/10/31/wox-plugin/" rel="next" title="wox plugin">
-                  wox plugin <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

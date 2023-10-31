@@ -114,7 +114,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -132,6 +132,111 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/31/wox-plugin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Weijaaaaa">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="weija's Blog">
+      <meta itemprop="description" content="123123123s">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | weija's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/10/31/wox-plugin/" class="post-title-link" itemprop="url">wox plugin</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2023-10-31 23:05:47 / 修改時間：23:28:07" itemprop="dateCreated datePublished" datetime="2023-10-31T23:05:47+08:00">2023-10-31</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="如何用-C-撰寫-wox-plugin"><a href="#如何用-C-撰寫-wox-plugin" class="headerlink" title="如何用 C# 撰寫 wox plugin"></a>如何用 C# 撰寫 wox plugin</h1><ul>
+<li><p>step 1</p>
+<ul>
+<li>新 .NET framework 專案</li>
+<li>安裝 nuget 套件 </li>
+<li><img src="https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_24534993274ad495efd7bcbdba03c603.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1698766380&Signature=z9G4bCRQyaWsQbjJpHCHcljc4bU="></li>
+</ul>
+</li>
+<li><p>step 2</p>
+<ul>
+<li>將 class 繼承 IPlugin 並實作功能</li>
+<li><img src="https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_89c19f648fe78a1050d56025b290e6b7.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1698766356&Signature=kVKT/rtGfpsRouHVvVD26sVl0hA="></li>
+<li>實作時先想好<ul>
+<li>想解決甚麼問題</li>
+<li>input and output</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>step 3 </p>
+<ul>
+<li>做好後 build 一下專案</li>
+<li>到 bin -&gt; debug 複製出所有 .dll檔案</li>
+<li>開新資料夾存著</li>
+</ul>
+</li>
+<li><p>step 4</p>
+<ul>
+<li>創建新檔案 plugin.json<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;ID&quot;: &quot;_&#123;any-uniqlo-code&#125;_&quot;,</span><br><span class="line">  &quot;ActionKeyword&quot;: &quot;ip&quot;,</span><br><span class="line">  &quot;Name&quot;: &quot;Ip See See&quot;,</span><br><span class="line">  &quot;Description&quot;: &quot;A simple plugin to lookup ip&quot;,</span><br><span class="line">  &quot;Author&quot;: &quot;Weija&quot;,</span><br><span class="line">  &quot;Version&quot;: &quot;1.1.0&quot;,</span><br><span class="line">  &quot;Language&quot;: &quot;csharp&quot;,</span><br><span class="line">  &quot;Website&quot;: &quot;_&#123;your-any-website&#125;_&quot;,</span><br><span class="line">  &quot;IcoPath&quot;: &quot;app.png&quot;,</span><br><span class="line">  &quot;ExecuteFileName&quot;: &quot;&#123;plugin-file-name&#125;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>將 dll 檔和 json 檔壓縮成 zip檔</li>
+<li>把 zip附檔名改成 wox</li>
+<li>將 .wox 檔案拉近 wox </li>
+<li>完工!!!</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
